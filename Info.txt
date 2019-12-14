@@ -59,6 +59,14 @@
     git log --no-merges         Náo exibe os merges no resultado
     git log [nomeArquivo | nomePasta]   Exibe os commits em um arquivo ou pasta
 
+# Retirar arquivo da stage area
+
+    git restore --staged fileUm.txt
+
+# Obter arquivos atualizados do repositório remoto
+
+    git checkout
+    git checkout nomeArquivo    Se o arquivo estiver na change area o mesmo será substituido pela sua versão anterior no repositório 
 
 
->>>> Next 2.4
+>>> 2.5
