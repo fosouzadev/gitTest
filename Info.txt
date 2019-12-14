@@ -20,8 +20,7 @@
 # Verificar estado dos arquivos e estado resumido
 
     git status
-    git status -s
-    git status --short
+    git status [-s | --short]
 
 # Enviar arquivo para stage area
 
@@ -47,3 +46,18 @@
     git mv nomeArquivo.ext nomeNovoArquivo.ext      Renomeia
     git mv pasta/arquivo.ext pasta/arquivo.ext      Move
     git mv pasta/arquivo.ext pasta/novoArquivo.ext  Move e renomeia
+
+# Visualizar historico de commits de uma branch
+
+    git log
+    git log [-p | --patch]      Exibe a lista de commits e alterações
+    git log -3                  Exibe os ultimos 3 commits
+    git log --stat              Exibe um resumo de cada commit
+    git log --pretty=[oneline | short | full | fuller]  Exibe opções de visualização, com mais ou menos informações
+    git log --graph             Exibe os rastreamentos de branchs e merges
+    git log --no-merges         Náo exibe os merges no resultado
+    git log [nomeArquivo | nomePasta]   Exibe os commits em um arquivo ou pasta
+
+
+
+>>>> Next 2.4
