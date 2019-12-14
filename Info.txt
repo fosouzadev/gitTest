@@ -32,3 +32,8 @@
     git diff            Compara a chage area com stage area
     git diff --staged   Compara a stage area com ultimo commit, pressionar a letra Q para sair
 
+# Commit no repositório
+
+    git commit          Abre o editor configurado como padrão no git para digitar o texto do commit, fechando o editor o commit é finalizado
+    git commit -m "texto do commit"
+
