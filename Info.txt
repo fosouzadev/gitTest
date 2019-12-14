@@ -36,6 +36,14 @@
 
     git commit          Abre o editor configurado como padrão no git para digitar o texto do commit, fechando o editor o commit é finalizado
     git commit -m "texto do commit"
-    git commit -a -m 'texto'  Pula a stage area, os arquivos vão da chage area para o repositório
+    git commit -a -m 'texto'  Pula a stage area, os arquivos vão da change area para o repositório
 
+# Excluir arquivo
 
+    rm [nomeArquivo | nomePasta]
+
+# Mover ou renomear arquivos
+
+    git mv nomeArquivo.ext nomeNovoArquivo.ext      Renomeia
+    git mv pasta/arquivo.ext pasta/arquivo.ext      Move
+    git mv pasta/arquivo.ext pasta/novoArquivo.ext  Move e renomeia
