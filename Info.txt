@@ -33,9 +33,10 @@
 
 # Commit no repositório
 
-    git commit          Abre o editor configurado como padrão no git para digitar o texto do commit, fechando o editor o commit é finalizado
+    git commit                          Abre o editor configurado como padrão no git para digitar o texto do commit, fechando o editor o commit é finalizado
     git commit -m "texto do commit"
-    git commit -a -m 'texto'  Pula a stage area, os arquivos vão da change area para o repositório
+    git commit -a -m 'texto'            Pula a stage area, os arquivos vão da change area para o repositório
+    git commit --amend -a -m 'texto'    A opção --amend substitui o ultimo commit, sobrescrevendo a mensagem do commit por uma nova
 
 # Excluir arquivo
 
