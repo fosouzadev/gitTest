@@ -69,4 +69,23 @@
     git checkout nomeArquivo    Se o arquivo estiver na change area o mesmo será substituido pela sua versão anterior no repositório 
 
 
->>> 2.5
+# Exibe nome/URL do local das branchs remotas
+
+    git remote
+    git remote -v
+
+# Criar novo local de branchs remotas
+
+    git remote add nomeLocal URL
+
+# Baixa as alterações do repositório remoto, mas não faz o merge
+
+    git fetch [origin | nomeLocalRemoto]
+
+# Baixa e faz merge das alterações do repositório remoto
+
+    git pull 
+
+# Enviar commits para o repositório remoto
+
+    git push [origin | nomeLocalRemoto] [nomeBranch]
