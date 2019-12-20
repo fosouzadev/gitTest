@@ -74,9 +74,22 @@
     git remote
     git remote -v
 
+# Exibe informações dos repositórios remotos
+
+    git remote show [origin | nomeLocalRemoto]
+
 # Criar novo local de branchs remotas
 
     git remote add nomeLocal URL
+
+# Renomeia local de branchs remotas
+
+    git remote rename nomeAntigo novoNome
+
+# Exclui local de branchs remotas
+
+    git remote remove nomeLocalRemoto
+    git remote rm nomeLocalRemoto
 
 # Baixa as alterações do repositório remoto, mas não faz o merge
 
@@ -88,4 +101,5 @@
 
 # Enviar commits para o repositório remoto
 
+    git push   (no repositorio selecionado)
     git push [origin | nomeLocalRemoto] [nomeBranch]
