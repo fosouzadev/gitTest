@@ -1,0 +1,105 @@
+# Exibir configurações do git
+
+    git config --list --show-origin
+    git config --global --list
+    git config --list
+
+# Setar informações pessoais
+
+    git config --global user.name "nome qualquer"
+    git config --global user.email email@teste.com.br
+
+# Iniciar repositorio local
+
+    git init
+
+# Clonando repositório
+
+    git clone URL nomeRepositorio
+
+# Verificar estado dos arquivos e estado resumido
+
+    git status
+    git status [-s | --short]
+
+# Enviar arquivo para stage area
+
+    git add [nomeArquivo | nomepasta | * para tudo]
+
+# Exibe diferenças dos arquivos
+
+    git diff            Compara a chage area com stage area
+    git diff --staged   Compara a stage area com ultimo commit, pressionar a letra Q para sair
+
+# Commit no repositório
+
+    git commit                          Abre o editor configurado como padrão no git para digitar o texto do commit, fechando o editor o commit é finalizado
+    git commit -m "texto do commit"
+    git commit -a -m 'texto'            Pula a stage area, os arquivos vão da change area para o repositório
+    git commit --amend -a -m 'texto'    A opção --amend substitui o ultimo commit, sobrescrevendo a mensagem do commit por uma nova
+
+# Excluir arquivo
+
+    rm [nomeArquivo | nomePasta]
+
+# Mover ou renomear arquivos
+
+    git mv nomeArquivo.ext nomeNovoArquivo.ext      Renomeia
+    git mv pasta/arquivo.ext pasta/arquivo.ext      Move
+    git mv pasta/arquivo.ext pasta/novoArquivo.ext  Move e renomeia
+
+# Visualizar historico de commits de uma branch
+
+    git log
+    git log [-p | --patch]      Exibe a lista de commits e alterações
+    git log -3                  Exibe os ultimos 3 commits
+    git log --stat              Exibe um resumo de cada commit
+    git log --pretty=[oneline | short | full | fuller]  Exibe opções de visualização, com mais ou menos informações
+    git log --graph             Exibe os rastreamentos de branchs e merges
+    git log --no-merges         Náo exibe os merges no resultado
+    git log [nomeArquivo | nomePasta]   Exibe os commits em um arquivo ou pasta
+
+# Retirar arquivo da stage area
+
+    git restore --staged fileUm.txt
+
+# Obter arquivos atualizados do repositório remoto
+
+    git checkout
+    git checkout nomeArquivo    Se o arquivo estiver na change area o mesmo será substituido pela sua versão anterior no repositório 
+
+
+# Exibe nome/URL do local das branchs remotas
+
+    git remote
+    git remote -v
+
+# Exibe informações dos repositórios remotos
+
+    git remote show [origin | nomeLocalRemoto]
+
+# Criar novo local de branchs remotas
+
+    git remote add nomeLocal URL
+
+# Renomeia local de branchs remotas
+
+    git remote rename nomeAntigo novoNome
+
+# Exclui local de branchs remotas
+
+    git remote remove nomeLocalRemoto
+    git remote rm nomeLocalRemoto
+
+# Baixa as alterações do repositório remoto, mas não faz o merge
+
+    git fetch [origin | nomeLocalRemoto]
+
+# Baixa e faz merge das alterações do repositório remoto
+
+    git pull 
+
+# Enviar commits para o repositório remoto
+
+    git push   (no repositorio selecionado)
+    git push [origin | nomeLocalRemoto] [nomeBranch]
