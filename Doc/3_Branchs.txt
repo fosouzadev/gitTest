@@ -17,3 +17,7 @@
 # Publicar branch local em servidor remoto
 
     git push --set-upstream [origin | localRemoto] nomeBranch
+
+# Publicar alterações em branch local em servidor remoto
+
+    git push
