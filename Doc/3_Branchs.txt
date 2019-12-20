@@ -1,6 +1,10 @@
 # Listar branchs locais
 
     git branch
+    git branch -v                       Exibe ultimo commit de cada branch
+    git branch --merged                 Exibe branchs que ja foram mescladas com a branch selecionada
+    git branch --no-merged              Exibe branchs que ainda não foram mescladas com a branch selecionada
+    git branch --no-merged nomeBranch   Exibe o que não foi mesclado com nomeBranch
 
 # Criar uma branch local
 
@@ -17,6 +21,7 @@
 # Excluir branch local
 
     git branch -d nomeBranch
+    git branch -D nomeBranch        Força a exclusão de branch que não foi feito merge ainda
 
 # Merge entre branchs locais: use o checkout para selecionar a branch destino
 
