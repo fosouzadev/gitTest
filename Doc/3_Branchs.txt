@@ -2,3 +2,5 @@
 
     git branch nomeBranch
 
+# Alterar de branch
+    git checkout nomeBranch
