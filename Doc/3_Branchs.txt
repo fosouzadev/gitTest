@@ -1,4 +1,4 @@
-# Criar um branch
+# Criar uma branch local
 
     git branch nomeBranch
 
@@ -6,14 +6,14 @@
     
     git checkout nomeBranch
 
-# Criar e alterar para nova branch
+# Criar e alterar para nova branch local
 
     git checkout -b nomeBranch
 
-# Merge entre branchs: use o checkout para selecionar a branch destino
+# Merge entre branchs locais: use o checkout para selecionar a branch destino
 
     git merge nomeBranchOrigem
 
-# Publicar branch local em servidor remotoj
+# Publicar branch local em servidor remoto
 
     git push --set-upstream [origin | localRemoto] nomeBranch
