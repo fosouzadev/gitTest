@@ -9,3 +9,7 @@
 # Criar e alterar para nova branch
 
     git checkout -b nomeBranch
+
+# Merge entre branchs: use o checkout para selecionar a branch destino
+
+    git merge nomeBranchOrigem
