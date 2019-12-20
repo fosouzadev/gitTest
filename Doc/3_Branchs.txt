@@ -3,4 +3,9 @@
     git branch nomeBranch
 
 # Alterar de branch
+    
     git checkout nomeBranch
+
+# Criar e alterar para nova branch
+
+    git checkout -b nomeBranch
