@@ -13,3 +13,7 @@
 # Merge entre branchs: use o checkout para selecionar a branch destino
 
     git merge nomeBranchOrigem
+
+# Publicar branch local em servidor remotoj
+
+    git push --set-upstream [origin | localRemoto] nomeBranch
