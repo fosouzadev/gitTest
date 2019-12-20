@@ -1,3 +1,26 @@
+# Exibir local das branchs remotas
+
+    git remote
+    git remote -v
+
+# Exibir branchs remotas
+
+    git ls-remote
+    git remote show [origin | nomeLocal]
+
+# Baixa as alterações do repositório remoto, mas não faz o merge
+
+    git fetch [origin | nomeLocalRemoto]
+
+# Baixa e faz merge das alterações do repositório remoto
+
+    git pull 
+
+# Enviar commits para o repositório remoto
+
+    git push   (no repositorio selecionado)
+    git push [origin | nomeLocalRemoto] [nomeBranch]
+
 # Listar branchs locais
 
     git branch
@@ -14,18 +37,20 @@
     
     git checkout nomeBranch
 
-# Criar e alterar para a nova branch local
+# Criar e alterar para a nova branch
 
-    git checkout -b nomeBranch
+    git checkout -b nomeNovaBranch                          Cria a partir de branch local
+    git checkout -b nomeNovaBranch nomeRemoto/nomeBranch    Cria a partir de branch remota
 
 # Excluir branch local
 
     git branch -d nomeBranch
     git branch -D nomeBranch        Força a exclusão de branch que não foi feito merge ainda
 
-# Merge entre branchs locais: use o checkout para selecionar a branch destino
+# Merge entre branchs : use o checkout para selecionar a branch destino
 
-    git merge nomeBranchOrigem
+    git merge nomeBranchOrigem          Merge local
+    git merge nomeRemoto/nomeBranch     Merge com brachs remotas
 
 # Publicar branch local em servidor remoto
 
@@ -33,4 +58,8 @@
 
 # Publicar alterações de branch local em servidor remoto
 
-    git push
+    git push   (no repositorio selecionado)
+    git push [origin | nomeLocalRemoto] [nomeBranch]
+
+
+    >>> 3.5 Rastreando Ramos
