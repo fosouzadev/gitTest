@@ -1,0 +1,57 @@
+# Clonando repositório remoto
+
+    git clone URL nomeRepositorio
+
+# Exibir local das branchs remotas
+
+    git remote
+    git remote -v
+
+# Exibir branchs remotas
+
+    git ls-remote
+    git remote show [origin | nomeLocalRemoto]
+
+# Baixa as alterações do repositório remoto, mas não faz o merge
+
+    git fetch [origin | nomeLocalRemoto]
+    git fetch --all                         Atualiza todos servidores locais
+
+# Baixa e faz merge das alterações do repositório remoto
+
+    git pull 
+
+# Enviar commits para o repositório remoto
+
+    git push   (no repositorio selecionado)
+    git push [origin | nomeLocalRemoto] [nomeBranch]
+
+# Listar branchs locais e seu rastreamento remoto
+
+    git branch -vv 
+
+# Publicar branch local em servidor remoto
+
+    git push [origin | nomeLocalRemoto] nomeBranch                 Não cria rastreamento com branch remota
+    git push --set-upstream [origin | localRemoto] nomeBranch      Cria um rastreamento com branch remota
+
+# Definir rastreamento de branch local para branch remota : a branch local irá sincronizar com essa branch remota
+
+    git branch -u [origin | nomeRemoto]/nomeBranch
+
+# Excluir branch remota
+
+    git push [origin | localRemoto] --delete nomeBranch
+
+# Criar novo local de branchs remotas
+
+    git remote add nomeLocal URL
+
+# Renomeia local de branchs remotas
+
+    git remote rename nomeAntigo novoNome
+
+# Exclui local de branchs remotas
+
+    git remote remove nomeLocalRemoto
+    git remote rm nomeLocalRemoto
