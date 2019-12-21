@@ -1,26 +1,3 @@
-# Exibir local das branchs remotas
-
-    git remote
-    git remote -v
-
-# Exibir branchs remotas
-
-    git ls-remote
-    git remote show [origin | nomeLocal]
-
-# Baixa as alterações do repositório remoto, mas não faz o merge
-
-    git fetch [origin | nomeLocalRemoto]
-
-# Baixa e faz merge das alterações do repositório remoto
-
-    git pull 
-
-# Enviar commits para o repositório remoto
-
-    git push   (no repositorio selecionado)
-    git push [origin | nomeLocalRemoto] [nomeBranch]
-
 # Listar branchs locais
 
     git branch
@@ -28,6 +5,7 @@
     git branch --merged                 Exibe branchs que ja foram mescladas com a branch selecionada
     git branch --no-merged              Exibe branchs que ainda não foram mescladas com a branch selecionada
     git branch --no-merged nomeBranch   Exibe o que não foi mesclado com nomeBranch
+    git branch -vv                      Exibe branchs locais e para qual branch remota sincroniza
 
 # Criar uma branch local
 
@@ -54,12 +32,10 @@
 
 # Publicar branch local em servidor remoto
 
-    git push --set-upstream [origin | localRemoto] nomeBranch
+    git push [origin | nomeLocalRemoto] nomeBranch                 Não cria rastreamento com branch remota
+    git push --set-upstream [origin | localRemoto] nomeBranch      Cria um rastreamento com branch remota
 
-# Publicar alterações de branch local em servidor remoto
+# Publicar alterações de branch local em branch remota
 
     git push   (no repositorio selecionado)
     git push [origin | nomeLocalRemoto] [nomeBranch]
-
-
-    >>> 3.5 Rastreando Ramos
