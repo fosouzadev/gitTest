@@ -30,6 +30,10 @@
     git merge nomeBranchOrigem          Merge local
     git merge nomeRemoto/nomeBranch     Merge com brachs remotas
 
+# Rebase entre branchs : utiliza uma estratégia sem merge, deixando o log mais limpo
+
+    git rebase nomeBranch
+
 # Publicar branch local em servidor remoto
 
     git push [origin | nomeLocalRemoto] nomeBranch                 Não cria rastreamento com branch remota
