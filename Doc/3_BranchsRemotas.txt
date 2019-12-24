@@ -1,6 +1,7 @@
 # Clonando repositório remoto
 
     git clone URL nomeRepositorio
+    git clone /pasta/pasta/arquivo.git      Clona um repositório de uma pasta na rede
 
 # Exibir local das branchs remotas
 
