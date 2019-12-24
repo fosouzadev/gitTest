@@ -1,0 +1,75 @@
+*** Visual Studio Code (terminal) - Git ***
+
+	+ Clonar repositório
+		git clone URL nomeLocal
+	
+	+ Ver branchs
+		git branch
+		git remote -v
+		git ls-remote
+	
+	+ Baixar branch remota
+		git checkout -b nomeBranchLocal origin/nomeBranchRemota
+	
+	+ Alternar entre branchs
+		git checkout nomeBranch
+	
+	+ Criar branch a partir de outra
+		git branch nomeBranch
+	
+	+ Publicar branch local
+		git push --set-upstream origin nomeBranch
+	
+    + Adicionar alterações para a stage area
+        git add *
+        git add nomeArquivo
+        git add nomePasta
+
+    + Revogar arquivo da stage area
+        git restore --staged nomeArquivo
+        git restore --staged nomePasta
+		git restore --staged *
+
+    + Desfazer alterações em arquivos na change area
+		git checkout nomePasta
+		git checkout nomeArquivo
+		git checkout *
+
+	+ Comparar mudanças em um arquivo
+		git diff nomeArquivo
+
+    + Commit stage area
+		git commit -m 'texto do commit'
+
+	+ Commit change area
+		git commit -a -m 'texto commit'
+
+	+ Publicar commits em branch remota
+		git push
+
+	+ Merge branch
+		git merge nomeBranch
+
+	+ Excluir Branch local
+		git branch -d nomeBranch
+
+	+ Excluir Branch remota
+		git push origin --delete nomeBranch
+
+	+ Histórico de branch
+		git log --oneline
+	
+	+ Histórico de arquivo ou pasta
+		git log --oneline nomeArquivo
+		git log --oneline nomePasta
+
+	+ Commit details
+		git show 					(detalhes do ultimo commit)
+		git show hashCommit	    	(exibe alterações nos arquivos)
+		git show hashCommit --stat	(exibe arquivos alterados)
+
+	- Sincronizar branch local com novos commits da branch remota
+		git pull
+	
+	- Comparar commits em histórico de arquivo
+			
