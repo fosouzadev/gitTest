@@ -58,6 +58,7 @@
 
 	+ Histórico de branch
 		git log --oneline
+		git log --pretty=format:"%h - %cd, %cn - %s"
 	
 	+ Histórico de arquivo ou pasta
 		git log --oneline nomeArquivo
@@ -68,8 +69,9 @@
 		git show hashCommit	    	(exibe alterações nos arquivos)
 		git show hashCommit --stat	(exibe arquivos alterados)
 
-	- Sincronizar branch local com novos commits da branch remota
+	+ Sincronizar branch local com novos commits da branch remota
 		git pull
 	
-	- Comparar commits em histórico de arquivo
+	+ Comparar commits em histórico de arquivo, deve colocar primeiro o hash mais antigo, seguido do mais atual
+		git diff hashCommit hashCommit nomeArquivo
 			
