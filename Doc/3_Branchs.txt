@@ -7,9 +7,10 @@
     git branch --no-merged nomeBranch   Exibe o que não foi mesclado com nomeBranch
     git branch -vv                      Exibe branchs locais e para qual branch remota sincroniza
 
-# Criar uma branch local
+# Criar uma branch
 
-    git branch nomeBranch
+    git branch nomeBranch                           Criar branch local
+    git branch nomeBranch nomeRemoto/nomeBranch     Criar branch local a partir de branch remota
 
 # Alterar de branch
     
