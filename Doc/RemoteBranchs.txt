@@ -1,0 +1,37 @@
+# Clonando repositório remoto
+
+    git clone URL nomeRepositorio
+    git clone /pasta/pasta/arquivo.git      Clona um repositório de uma pasta na rede
+
+# Exibe nome/URL do local das branchs remotas
+
+    git remote
+    git remote -v
+
+# Exibir branchs remotas
+
+    git ls-remote
+    git remote show [origin | nomeLocalRemoto]
+
+# Exibe informações dos repositórios remotos
+
+    git remote show [origin | nomeLocalRemoto]
+
+# Criar novo local de branchs remotas
+
+    git remote add nomeLocal URL
+
+# Renomeia local de branchs remotas
+
+    git remote rename nomeAntigo novoNome
+
+# Exclui local de branchs remotas
+
+    git remote remove nomeLocalRemoto
+    git remote rm nomeLocalRemoto
+
+# Excluir Branch remota
+	git push [origin | localRemoto] --delete nomeBranch
+
+# Excluir tags
+	git push [origin | localRemoto] --delete versaoTag	    Exclui na branch remota

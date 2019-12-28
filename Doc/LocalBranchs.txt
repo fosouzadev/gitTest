@@ -1,0 +1,107 @@
+# Listar branchs locais
+    git branch
+    git branch -v                       Exibe ultimo commit de cada branch
+    git branch --merged                 Exibe branchs que ja foram mescladas com a branch selecionada
+    git branch --no-merged              Exibe branchs que ainda não foram mescladas com a branch selecionada
+    git branch --no-merged nomeBranch   Exibe o que não foi mesclado com nomeBranch
+    git branch -vv                      Exibe branchs locais e para qual branch remota sincroniza
+
+# Criar uma branch
+    git branch nomeBranch                           Criar branch local
+    git branch nomeBranch nomeRemoto/nomeBranch     Criar branch local a partir de branch remota
+
+# Obter arquivos atualizados do repositório remoto
+    git checkout
+
+# Baixa as alterações do repositório remoto, mas não faz o merge
+    git fetch [origin | nomeLocalRemoto]
+    git fetch --all                         Atualiza todos servidores locais
+
+# Baixa e faz merge das alterações do repositório remoto
+    git pull 
+
+# Alternar entre branchs
+    git checkout nomeBranch
+
+# Criar e alterar para a nova branch
+    git checkout -b nomeNovaBranch                          Cria a partir de branch local
+    git checkout -b nomeNovaBranch nomeRemoto/nomeBranch    Cria a partir de branch remota
+
+# Baixar branch remota
+	git checkout -b nomeBranchLocal origin/nomeBranchRemota
+
+# Commit na branch
+    git commit                          Abre o editor configurado como padrão no git para digitar o texto do commit, fechando o editor o commit é finalizado
+    git commit -m "texto do commit"
+    git commit -a -m 'texto'            Pula a stage area, os arquivos vão da change area para o repositório
+    git commit -am 'texto'              Pula a stage area, os arquivos vão da change area para o repositório
+    git commit --amend -a -m 'texto'    A opção --amend substitui o ultimo commit, sobrescrevendo a mensagem do commit por uma nova
+
+# Detalhe do commit
+	git show 					    Detalhes do ultimo commit
+	git show hashCommit	    	    Exibe alterações nos arquivos
+	git show hashCommit --stat	    Exibe arquivos alterados
+
+# Comparar commits em histórico de arquivo, deve colocar primeiro o hash mais antigo, seguido do mais atual
+	git diff hashCommit hashCommit nomeArquivo
+
+# Desfazer commit
+    git reset --soft hashCommit        Elimina commits acima do hash informado e os arquivos que tinham sido alterados ficam na stage area
+    git reset --mixed hashCommit       Elimina commits acima do hash informado e os arquivos que tinham sido alterados ficam na change area
+    git reset --hard hashCommit        Elimina commits acima do hash informado e os arquivos que tinham sido alterados são perdidos
+
+# Reverter commit
+    git revert hashCommit               Cria um novo commit revertendo o commit anterior, abre editor para informar mensagem
+    git revert --no-commit hashCommit   Revert commit e deixa alterações na stage area, permitindo comitar em seguida
+
+# Visualizar historico de commits de uma branch
+    git log
+    git log [-p | --patch]      Exibe a lista de commits e alterações
+    git log -3                  Exibe os ultimos 3 commits
+    git log --stat              Exibe um resumo de cada commit
+    git log --pretty=[oneline | short | full | fuller]  Exibe opções de visualização, com mais ou menos informações
+    git log --graph             Exibe os rastreamentos de branchs e merges
+    git log --no-merges         Náo exibe os merges no resultado
+    git log [nomeArquivo | nomePasta]   Exibe os commits em um arquivo ou pasta
+    git shortlog                Exibe o texto dos commits por usuário em ordem crescente
+    git shortlog -s             Exibe a quantidade de commits por usuário
+    git log --pretty=format:"%h - %cd, %cn - %s"        Listagem personalizada
+
+# Excluir branch local
+    git branch -d nomeBranch
+    git branch -D nomeBranch        Força a exclusão de branch que não foi feito merge ainda
+
+# Merge entre branchs : use o checkout para selecionar a branch destino
+    git merge nomeBranchOrigem          Merge local
+    git merge nomeRemoto/nomeBranch     Merge com brachs remotas
+
+# Rebase entre branchs : utiliza uma estratégia sem merge, deixando o log mais limpo, porem precisando de um merge em seguida
+    git rebase nomeBranch
+
+# Publicar branch local em servidor remoto
+    git push [origin | nomeLocalRemoto] nomeBranch                 Não cria rastreamento com branch remota
+    git push --set-upstream [origin | localRemoto] nomeBranch      Cria um rastreamento com branch remota
+
+# Definir rastreamento de branch local para branch remota : a branch local irá sincronizar com essa branch remota
+    git branch -u [origin | nomeRemoto]/nomeBranch
+
+# Publicar commits para o repositório remoto
+    git push   (no repositorio selecionado)
+    git push [origin | nomeLocalRemoto] [nomeBranch]
+
+# Criar tag
+	git tag -a versaoTag -m 'texto da tag'		Cria tag para o ultimo commit
+	git tag -a versaoTag hashCommit
+
+# Exibir tags
+	git tag
+	git tag "1*"
+	git show versaoTag		Exibe o que a tag possui
+
+# Publicar tags
+	git push nomeRemoto versaoTag
+	git push --tags
+	git push [origin | nomeRemoto] nomeBranch --tags
+
+# Excluir tags
+	git tag -d versaoTag				Exclui na branch local

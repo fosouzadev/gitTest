@@ -1,0 +1,16 @@
+# Exibir configurações do git
+
+    git --version
+    git config --list --show-origin
+    git config --global --list
+    git config --list
+
+# Setar informações pessoais
+
+    git config --global user.name "nome qualquer"
+    git config --global user.email email@teste.com.br
+
+# Iniciar repositorio local
+
+    git init
+    git init --bare     Cria repositorio base central, geralmente criado no servidor
