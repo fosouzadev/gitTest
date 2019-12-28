@@ -28,8 +28,9 @@
 
 # Exibe diferenças dos arquivos
 
-    git diff            Compara a chage area com stage area
-    git diff --staged   Compara a stage area com ultimo commit, pressionar a letra Q para sair
+    git diff                Compara a chage area com ultimo commit, caso o arquivo esteja na change e stage, tambem exibe alterações
+    git diff --staged       Compara a stage area com ultimo commit, pressionar a letra Q para sair
+    git diff --name-only    Compara a chage area com ultimo commit, caso o arquivo esteja na change e stage, tambem exibe o nome
 
 # Commit no repositório
 
@@ -58,6 +59,8 @@
     git log --graph             Exibe os rastreamentos de branchs e merges
     git log --no-merges         Náo exibe os merges no resultado
     git log [nomeArquivo | nomePasta]   Exibe os commits em um arquivo ou pasta
+    git shortlog                Exibe o texto dos commits por usuário em ordem crescente
+    git shortlog -s             Exibe a quantidade de commits por usuário
 
 # Retirar arquivo da stage area
 
