@@ -1,39 +1,8 @@
-# Listar branchs locais
 
-    git branch
-    git branch -v                       Exibe ultimo commit de cada branch
-    git branch --merged                 Exibe branchs que ja foram mescladas com a branch selecionada
-    git branch --no-merged              Exibe branchs que ainda não foram mescladas com a branch selecionada
-    git branch --no-merged nomeBranch   Exibe o que não foi mesclado com nomeBranch
-    git branch -vv                      Exibe branchs locais e para qual branch remota sincroniza
 
-# Criar uma branch
 
-    git branch nomeBranch                           Criar branch local
-    git branch nomeBranch nomeRemoto/nomeBranch     Criar branch local a partir de branch remota
 
-# Alterar de branch
-    
-    git checkout nomeBranch
 
-# Criar e alterar para a nova branch
-
-    git checkout -b nomeNovaBranch                          Cria a partir de branch local
-    git checkout -b nomeNovaBranch nomeRemoto/nomeBranch    Cria a partir de branch remota
-
-# Excluir branch local
-
-    git branch -d nomeBranch
-    git branch -D nomeBranch        Força a exclusão de branch que não foi feito merge ainda
-
-# Merge entre branchs : use o checkout para selecionar a branch destino
-
-    git merge nomeBranchOrigem          Merge local
-    git merge nomeRemoto/nomeBranch     Merge com brachs remotas
-
-# Rebase entre branchs : utiliza uma estratégia sem merge, deixando o log mais limpo
-
-    git rebase nomeBranch
 
 # Publicar branch local em servidor remoto
 
