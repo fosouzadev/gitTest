@@ -92,5 +92,3 @@
 	+ Excluir tags
 		git tag -d versaoTag				Exclui na branch local
 		git push origin --delete versaoTag	Exclui na branch remota
-
-			
