@@ -45,7 +45,8 @@
     git reset --hard hashCommit        Elimina commits acima do hash informado e os arquivos que tinham sido alterados são perdidos
 
 # Reverter commit
-    git revert hashCommit               Cria um novo commit revertendo o commit anterior
+    git revert hashCommit               Cria um novo commit revertendo o commit anterior, abre editor para informar mensagem
+    git revert --no-commit hashCommit   Revert commit e deixa alterações na stage area, permitindo comitar em seguida
 
 # Excluir arquivo
 
