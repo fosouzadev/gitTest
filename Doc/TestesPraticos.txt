@@ -74,4 +74,23 @@
 	
 	+ Comparar commits em histórico de arquivo, deve colocar primeiro o hash mais antigo, seguido do mais atual
 		git diff hashCommit hashCommit nomeArquivo
+
+	+ Criar tag
+		git tag -a versaoTag -m 'texto da tag'		Cria tag para o ultimo commit
+		git tag -a versaoTag hashCommit
+
+	+ Exibir tags
+		git tag
+		git tag "1*"
+		git show versaoTag		Exibe o que a tag possui
+
+	+ Publicar tags
+		git push nomeRemoto versaoTag
+		git push --tags
+		git push [origin | nomeRemoto] nomeBranch --tags
+	
+	+ Excluir tags
+		git tag -d versaoTag				Exclui na branch local
+		git push origin --delete versaoTag	Exclui na branch remota
+
 			
