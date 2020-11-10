@@ -24,11 +24,13 @@
         git add *
         git add nomeArquivo
         git add nomePasta
+		git add . 
 
     + Revogar arquivo da stage area
-        git restore --staged nomeArquivo
-        git restore --staged nomePasta
-		git restore --staged *
+        git restore --stage nomeArquivo
+        git restore --stage nomePasta
+		git restore --stage *
+		git restore --stage .
 
     + Desfazer alterações em arquivos na change area
 		git checkout nomePasta
